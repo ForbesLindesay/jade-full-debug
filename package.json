@@ -1,0 +1,27 @@
+{
+  "name": "jade-full-debug",
+  "version": "0.0.0",
+  "description": "Serious debugging of jade compilation",
+  "bin": "./bin/cli.js",
+  "keywords": [],
+  "dependencies": {
+    "unescape-html": "~1.0.0",
+    "object-explorer": "~0.2.0",
+    "json-literal": "~1.1.0",
+    "jade": "~0.35.0",
+    "express": "~3.4.3",
+    "browserify-middleware": "~1.19.0"
+  },
+  "devDependencies": {
+    "linify": "*"
+  },
+  "scripts": {
+    "prepublish": "linify transform ./bin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/jade-full-debug.git"
+  },
+  "author": "ForbesLindesay",
+  "license": "MIT"
+}

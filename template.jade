@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta(charset='utf8')
+    title Jade Debug
+    link(rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+    style.
+      html, body, .container, .row {
+          height: 100%;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+      .container {
+        max-width: 100%;
+      }
+      .row > div {
+        overflow-y: auto;
+        overflow-x: auto;
+        height: 100%;
+      }
+
+      body { padding-top: 70px; }
+      .token {
+        padding: 1em;
+        margin: 0.5em;
+        background: rgb(233, 233, 233);
+      }
+      .token.active {
+        background: rgb(205, 207, 233);
+      }
+      .object-explorer .future span {
+        opacity: 0.5;
+      }
+      .object-explorer .current span {
+        opacity: 1;
+      }
+      .object-explorer .current {
+        background: rgb(205, 207, 233);
+      }
+      .object-explorer .past span {
+        opacity: 1;
+      }
+  body
+    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+      .navbar-header
+        .navbar-brand JADE DEBUG
+      button#backward.btn.btn-default.navbar-btn Step Backwards
+      = '  '
+      button#forward.btn.btn-primary.navbar-btn Step Forwards
+    .container
+      .row
+        .col-md-4#tokens
+        .col-md-8#ast
+    script#data(type='json-literl')= data
+    script(src='/client.js')
