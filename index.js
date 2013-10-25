@@ -7,9 +7,11 @@ var express = require('express');
 var browserify = require('browserify-middleware');
 var jade;
 try {
-  jade = require('./lib/jade.js');
+  jade = require(process.cwd() + '/lib/jade.js');
+  console.dir('using local jade');
 } catch (ex) {
   jade = require('jade');
+  console.dir('using npm jade');
 }
 
 
@@ -82,7 +84,7 @@ app.get('/*', function (req, res, next) {
   try {
     src = fs.readFileSync(p, 'utf8');
   } catch (ex) {
-    if (ex.code !== 'ENOENT') throw ex;
+    if (ex.code !== 'ENOENT' && ex.code !== 'EISDIR') throw ex;
     return next();
   }
   res.send(renderDebugData(generateDebugging(src, {
