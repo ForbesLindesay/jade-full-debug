@@ -1,5 +1,7 @@
 # jade-full-debug
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/jade-full-debug.svg)](https://greenkeeper.io/)
+
 Serious debugging of jade compilation
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/jade-full-debug/master.svg)](https://travis-ci.org/ForbesLindesay/jade-full-debug)
