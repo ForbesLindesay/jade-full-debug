@@ -8,9 +8,9 @@
     "unescape-html": "~1.0.0",
     "object-explorer": "~0.2.0",
     "json-literal": "~1.1.0",
-    "jade": "~0.35.0",
-    "express": "~3.4.3",
-    "browserify-middleware": "~1.19.0"
+    "jade": "~1.11.0",
+    "express": "~4.14.1",
+    "browserify-middleware": "~7.1.0"
   },
   "devDependencies": {
     "linify": "*"
